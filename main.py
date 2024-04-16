@@ -1,5 +1,12 @@
 '''
+Emotion...
 Helpful video: https://www.youtube.com/watch?v=fkgpvkqcoJc. It uses Deepface for emotion, race, and age image recognition. Also works in real-time
+
+Clothing...
+Clothing dataset: https://github.com/switchablenorms/DeepFashion2
+Finding similar clothes: https://github.com/axinc-ai/ailia-models/tree/master/deep_fashion/mmfashion_retrieval
+Clothing detection: https://github.com/axinc-ai/ailia-models/tree/master/deep_fashion/clothing-detection
+Clothing attribute detection: https://github.com/open-mmlab/mmfashion
 '''
 import cv2
 from deepface import DeepFace
