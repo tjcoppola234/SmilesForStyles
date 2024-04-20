@@ -7,6 +7,7 @@ Clothing dataset: https://github.com/switchablenorms/DeepFashion2
 Finding similar clothes: https://github.com/axinc-ai/ailia-models/tree/master/deep_fashion/mmfashion_retrieval
 Clothing detection: https://github.com/axinc-ai/ailia-models/tree/master/deep_fashion/clothing-detection
 Clothing attribute detection: https://github.com/open-mmlab/mmfashion
+Alt Attribute Resource: https://github.com/tsennikova/fashion-ai/blob/main/fashion-attribute-recognition.ipynb
 '''
 import cv2
 from deepface import DeepFace

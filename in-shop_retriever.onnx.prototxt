@@ -1,0 +1,3459 @@
+ir_version: 6
+producer_name: "pytorch"
+producer_version: "1.9"
+model_version: 0
+graph {
+  name: "torch-jit-export"
+  node {
+    input: "img"
+    input: "523"
+    input: "524"
+    output: "522"
+    name: "Conv_0"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 7
+      ints: 7
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 3
+      ints: 3
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 2
+      ints: 2
+      type: INTS
+    }
+  }
+  node {
+    input: "522"
+    output: "336"
+    name: "Relu_1"
+    op_type: "Relu"
+  }
+  node {
+    input: "336"
+    output: "337"
+    name: "MaxPool_2"
+    op_type: "MaxPool"
+    attribute {
+      name: "ceil_mode"
+      i: 0
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 1
+      ints: 1
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 2
+      ints: 2
+      type: INTS
+    }
+  }
+  node {
+    input: "337"
+    input: "526"
+    input: "527"
+    output: "525"
+    name: "Conv_3"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "525"
+    output: "340"
+    name: "Relu_4"
+    op_type: "Relu"
+  }
+  node {
+    input: "340"
+    input: "529"
+    input: "530"
+    output: "528"
+    name: "Conv_5"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 1
+      ints: 1
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "528"
+    output: "343"
+    name: "Relu_6"
+    op_type: "Relu"
+  }
+  node {
+    input: "343"
+    input: "532"
+    input: "533"
+    output: "531"
+    name: "Conv_7"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "337"
+    input: "535"
+    input: "536"
+    output: "534"
+    name: "Conv_8"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "531"
+    input: "534"
+    output: "348"
+    name: "Add_9"
+    op_type: "Add"
+  }
+  node {
+    input: "348"
+    output: "349"
+    name: "Relu_10"
+    op_type: "Relu"
+  }
+  node {
+    input: "349"
+    input: "538"
+    input: "539"
+    output: "537"
+    name: "Conv_11"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "537"
+    output: "352"
+    name: "Relu_12"
+    op_type: "Relu"
+  }
+  node {
+    input: "352"
+    input: "541"
+    input: "542"
+    output: "540"
+    name: "Conv_13"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 1
+      ints: 1
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "540"
+    output: "355"
+    name: "Relu_14"
+    op_type: "Relu"
+  }
+  node {
+    input: "355"
+    input: "544"
+    input: "545"
+    output: "543"
+    name: "Conv_15"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "543"
+    input: "349"
+    output: "358"
+    name: "Add_16"
+    op_type: "Add"
+  }
+  node {
+    input: "358"
+    output: "359"
+    name: "Relu_17"
+    op_type: "Relu"
+  }
+  node {
+    input: "359"
+    input: "547"
+    input: "548"
+    output: "546"
+    name: "Conv_18"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "546"
+    output: "362"
+    name: "Relu_19"
+    op_type: "Relu"
+  }
+  node {
+    input: "362"
+    input: "550"
+    input: "551"
+    output: "549"
+    name: "Conv_20"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 1
+      ints: 1
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "549"
+    output: "365"
+    name: "Relu_21"
+    op_type: "Relu"
+  }
+  node {
+    input: "365"
+    input: "553"
+    input: "554"
+    output: "552"
+    name: "Conv_22"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "552"
+    input: "359"
+    output: "368"
+    name: "Add_23"
+    op_type: "Add"
+  }
+  node {
+    input: "368"
+    output: "369"
+    name: "Relu_24"
+    op_type: "Relu"
+  }
+  node {
+    input: "369"
+    input: "556"
+    input: "557"
+    output: "555"
+    name: "Conv_25"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "555"
+    output: "372"
+    name: "Relu_26"
+    op_type: "Relu"
+  }
+  node {
+    input: "372"
+    input: "559"
+    input: "560"
+    output: "558"
+    name: "Conv_27"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 1
+      ints: 1
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 2
+      ints: 2
+      type: INTS
+    }
+  }
+  node {
+    input: "558"
+    output: "375"
+    name: "Relu_28"
+    op_type: "Relu"
+  }
+  node {
+    input: "375"
+    input: "562"
+    input: "563"
+    output: "561"
+    name: "Conv_29"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "369"
+    input: "565"
+    input: "566"
+    output: "564"
+    name: "Conv_30"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 2
+      ints: 2
+      type: INTS
+    }
+  }
+  node {
+    input: "561"
+    input: "564"
+    output: "380"
+    name: "Add_31"
+    op_type: "Add"
+  }
+  node {
+    input: "380"
+    output: "381"
+    name: "Relu_32"
+    op_type: "Relu"
+  }
+  node {
+    input: "381"
+    input: "568"
+    input: "569"
+    output: "567"
+    name: "Conv_33"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "567"
+    output: "384"
+    name: "Relu_34"
+    op_type: "Relu"
+  }
+  node {
+    input: "384"
+    input: "571"
+    input: "572"
+    output: "570"
+    name: "Conv_35"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 1
+      ints: 1
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "570"
+    output: "387"
+    name: "Relu_36"
+    op_type: "Relu"
+  }
+  node {
+    input: "387"
+    input: "574"
+    input: "575"
+    output: "573"
+    name: "Conv_37"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "573"
+    input: "381"
+    output: "390"
+    name: "Add_38"
+    op_type: "Add"
+  }
+  node {
+    input: "390"
+    output: "391"
+    name: "Relu_39"
+    op_type: "Relu"
+  }
+  node {
+    input: "391"
+    input: "577"
+    input: "578"
+    output: "576"
+    name: "Conv_40"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "576"
+    output: "394"
+    name: "Relu_41"
+    op_type: "Relu"
+  }
+  node {
+    input: "394"
+    input: "580"
+    input: "581"
+    output: "579"
+    name: "Conv_42"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 1
+      ints: 1
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "579"
+    output: "397"
+    name: "Relu_43"
+    op_type: "Relu"
+  }
+  node {
+    input: "397"
+    input: "583"
+    input: "584"
+    output: "582"
+    name: "Conv_44"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "582"
+    input: "391"
+    output: "400"
+    name: "Add_45"
+    op_type: "Add"
+  }
+  node {
+    input: "400"
+    output: "401"
+    name: "Relu_46"
+    op_type: "Relu"
+  }
+  node {
+    input: "401"
+    input: "586"
+    input: "587"
+    output: "585"
+    name: "Conv_47"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "585"
+    output: "404"
+    name: "Relu_48"
+    op_type: "Relu"
+  }
+  node {
+    input: "404"
+    input: "589"
+    input: "590"
+    output: "588"
+    name: "Conv_49"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 1
+      ints: 1
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "588"
+    output: "407"
+    name: "Relu_50"
+    op_type: "Relu"
+  }
+  node {
+    input: "407"
+    input: "592"
+    input: "593"
+    output: "591"
+    name: "Conv_51"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "591"
+    input: "401"
+    output: "410"
+    name: "Add_52"
+    op_type: "Add"
+  }
+  node {
+    input: "410"
+    output: "411"
+    name: "Relu_53"
+    op_type: "Relu"
+  }
+  node {
+    input: "411"
+    input: "595"
+    input: "596"
+    output: "594"
+    name: "Conv_54"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "594"
+    output: "414"
+    name: "Relu_55"
+    op_type: "Relu"
+  }
+  node {
+    input: "414"
+    input: "598"
+    input: "599"
+    output: "597"
+    name: "Conv_56"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 1
+      ints: 1
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 2
+      ints: 2
+      type: INTS
+    }
+  }
+  node {
+    input: "597"
+    output: "417"
+    name: "Relu_57"
+    op_type: "Relu"
+  }
+  node {
+    input: "417"
+    input: "601"
+    input: "602"
+    output: "600"
+    name: "Conv_58"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "411"
+    input: "604"
+    input: "605"
+    output: "603"
+    name: "Conv_59"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 2
+      ints: 2
+      type: INTS
+    }
+  }
+  node {
+    input: "600"
+    input: "603"
+    output: "422"
+    name: "Add_60"
+    op_type: "Add"
+  }
+  node {
+    input: "422"
+    output: "423"
+    name: "Relu_61"
+    op_type: "Relu"
+  }
+  node {
+    input: "423"
+    input: "607"
+    input: "608"
+    output: "606"
+    name: "Conv_62"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "606"
+    output: "426"
+    name: "Relu_63"
+    op_type: "Relu"
+  }
+  node {
+    input: "426"
+    input: "610"
+    input: "611"
+    output: "609"
+    name: "Conv_64"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 1
+      ints: 1
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "609"
+    output: "429"
+    name: "Relu_65"
+    op_type: "Relu"
+  }
+  node {
+    input: "429"
+    input: "613"
+    input: "614"
+    output: "612"
+    name: "Conv_66"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "612"
+    input: "423"
+    output: "432"
+    name: "Add_67"
+    op_type: "Add"
+  }
+  node {
+    input: "432"
+    output: "433"
+    name: "Relu_68"
+    op_type: "Relu"
+  }
+  node {
+    input: "433"
+    input: "616"
+    input: "617"
+    output: "615"
+    name: "Conv_69"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "615"
+    output: "436"
+    name: "Relu_70"
+    op_type: "Relu"
+  }
+  node {
+    input: "436"
+    input: "619"
+    input: "620"
+    output: "618"
+    name: "Conv_71"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 1
+      ints: 1
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "618"
+    output: "439"
+    name: "Relu_72"
+    op_type: "Relu"
+  }
+  node {
+    input: "439"
+    input: "622"
+    input: "623"
+    output: "621"
+    name: "Conv_73"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "621"
+    input: "433"
+    output: "442"
+    name: "Add_74"
+    op_type: "Add"
+  }
+  node {
+    input: "442"
+    output: "443"
+    name: "Relu_75"
+    op_type: "Relu"
+  }
+  node {
+    input: "443"
+    input: "625"
+    input: "626"
+    output: "624"
+    name: "Conv_76"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "624"
+    output: "446"
+    name: "Relu_77"
+    op_type: "Relu"
+  }
+  node {
+    input: "446"
+    input: "628"
+    input: "629"
+    output: "627"
+    name: "Conv_78"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 1
+      ints: 1
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "627"
+    output: "449"
+    name: "Relu_79"
+    op_type: "Relu"
+  }
+  node {
+    input: "449"
+    input: "631"
+    input: "632"
+    output: "630"
+    name: "Conv_80"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "630"
+    input: "443"
+    output: "452"
+    name: "Add_81"
+    op_type: "Add"
+  }
+  node {
+    input: "452"
+    output: "453"
+    name: "Relu_82"
+    op_type: "Relu"
+  }
+  node {
+    input: "453"
+    input: "634"
+    input: "635"
+    output: "633"
+    name: "Conv_83"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "633"
+    output: "456"
+    name: "Relu_84"
+    op_type: "Relu"
+  }
+  node {
+    input: "456"
+    input: "637"
+    input: "638"
+    output: "636"
+    name: "Conv_85"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 1
+      ints: 1
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "636"
+    output: "459"
+    name: "Relu_86"
+    op_type: "Relu"
+  }
+  node {
+    input: "459"
+    input: "640"
+    input: "641"
+    output: "639"
+    name: "Conv_87"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "639"
+    input: "453"
+    output: "462"
+    name: "Add_88"
+    op_type: "Add"
+  }
+  node {
+    input: "462"
+    output: "463"
+    name: "Relu_89"
+    op_type: "Relu"
+  }
+  node {
+    input: "463"
+    input: "643"
+    input: "644"
+    output: "642"
+    name: "Conv_90"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "642"
+    output: "466"
+    name: "Relu_91"
+    op_type: "Relu"
+  }
+  node {
+    input: "466"
+    input: "646"
+    input: "647"
+    output: "645"
+    name: "Conv_92"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 1
+      ints: 1
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "645"
+    output: "469"
+    name: "Relu_93"
+    op_type: "Relu"
+  }
+  node {
+    input: "469"
+    input: "649"
+    input: "650"
+    output: "648"
+    name: "Conv_94"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "648"
+    input: "463"
+    output: "472"
+    name: "Add_95"
+    op_type: "Add"
+  }
+  node {
+    input: "472"
+    output: "473"
+    name: "Relu_96"
+    op_type: "Relu"
+  }
+  node {
+    input: "473"
+    input: "652"
+    input: "653"
+    output: "651"
+    name: "Conv_97"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "651"
+    output: "476"
+    name: "Relu_98"
+    op_type: "Relu"
+  }
+  node {
+    input: "476"
+    input: "655"
+    input: "656"
+    output: "654"
+    name: "Conv_99"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 1
+      ints: 1
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 2
+      ints: 2
+      type: INTS
+    }
+  }
+  node {
+    input: "654"
+    output: "479"
+    name: "Relu_100"
+    op_type: "Relu"
+  }
+  node {
+    input: "479"
+    input: "658"
+    input: "659"
+    output: "657"
+    name: "Conv_101"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "473"
+    input: "661"
+    input: "662"
+    output: "660"
+    name: "Conv_102"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 2
+      ints: 2
+      type: INTS
+    }
+  }
+  node {
+    input: "657"
+    input: "660"
+    output: "484"
+    name: "Add_103"
+    op_type: "Add"
+  }
+  node {
+    input: "484"
+    output: "485"
+    name: "Relu_104"
+    op_type: "Relu"
+  }
+  node {
+    input: "485"
+    input: "664"
+    input: "665"
+    output: "663"
+    name: "Conv_105"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "663"
+    output: "488"
+    name: "Relu_106"
+    op_type: "Relu"
+  }
+  node {
+    input: "488"
+    input: "667"
+    input: "668"
+    output: "666"
+    name: "Conv_107"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 1
+      ints: 1
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "666"
+    output: "491"
+    name: "Relu_108"
+    op_type: "Relu"
+  }
+  node {
+    input: "491"
+    input: "670"
+    input: "671"
+    output: "669"
+    name: "Conv_109"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "669"
+    input: "485"
+    output: "494"
+    name: "Add_110"
+    op_type: "Add"
+  }
+  node {
+    input: "494"
+    output: "495"
+    name: "Relu_111"
+    op_type: "Relu"
+  }
+  node {
+    input: "495"
+    input: "673"
+    input: "674"
+    output: "672"
+    name: "Conv_112"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "672"
+    output: "498"
+    name: "Relu_113"
+    op_type: "Relu"
+  }
+  node {
+    input: "498"
+    input: "676"
+    input: "677"
+    output: "675"
+    name: "Conv_114"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 3
+      ints: 3
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 1
+      ints: 1
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "675"
+    output: "501"
+    name: "Relu_115"
+    op_type: "Relu"
+  }
+  node {
+    input: "501"
+    input: "679"
+    input: "680"
+    output: "678"
+    name: "Conv_116"
+    op_type: "Conv"
+    attribute {
+      name: "dilations"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "group"
+      i: 1
+      type: INT
+    }
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "pads"
+      ints: 0
+      ints: 0
+      ints: 0
+      ints: 0
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "678"
+    input: "495"
+    output: "504"
+    name: "Add_117"
+    op_type: "Add"
+  }
+  node {
+    input: "504"
+    output: "505"
+    name: "Relu_118"
+    op_type: "Relu"
+  }
+  node {
+    input: "505"
+    output: "506"
+    name: "AveragePool_119"
+    op_type: "AveragePool"
+    attribute {
+      name: "kernel_shape"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+    attribute {
+      name: "strides"
+      ints: 1
+      ints: 1
+      type: INTS
+    }
+  }
+  node {
+    input: "506"
+    output: "507"
+    name: "Shape_120"
+    op_type: "Shape"
+  }
+  node {
+    output: "508"
+    name: "Constant_121"
+    op_type: "Constant"
+    attribute {
+      name: "value"
+      t {
+        data_type: 7
+      }
+      type: TENSOR
+    }
+  }
+  node {
+    input: "507"
+    input: "508"
+    output: "509"
+    name: "Gather_122"
+    op_type: "Gather"
+    attribute {
+      name: "axis"
+      i: 0
+      type: INT
+    }
+  }
+  node {
+    input: "509"
+    output: "511"
+    name: "Unsqueeze_123"
+    op_type: "Unsqueeze"
+    attribute {
+      name: "axes"
+      ints: 0
+      type: INTS
+    }
+  }
+  node {
+    input: "511"
+    input: "681"
+    output: "513"
+    name: "Concat_124"
+    op_type: "Concat"
+    attribute {
+      name: "axis"
+      i: 0
+      type: INT
+    }
+  }
+  node {
+    input: "506"
+    input: "513"
+    output: "514"
+    name: "Reshape_125"
+    op_type: "Reshape"
+  }
+  node {
+    input: "514"
+    input: "global_pool.global_layers.0.weight"
+    input: "global_pool.global_layers.0.bias"
+    output: "515"
+    name: "Gemm_126"
+    op_type: "Gemm"
+    attribute {
+      name: "alpha"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "beta"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "transB"
+      i: 1
+      type: INT
+    }
+  }
+  node {
+    input: "515"
+    output: "516"
+    name: "Relu_127"
+    op_type: "Relu"
+  }
+  node {
+    input: "516"
+    input: "global_pool.global_layers.3.weight"
+    input: "global_pool.global_layers.3.bias"
+    output: "517"
+    name: "Gemm_128"
+    op_type: "Gemm"
+    attribute {
+      name: "alpha"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "beta"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "transB"
+      i: 1
+      type: INT
+    }
+  }
+  node {
+    input: "517"
+    output: "518"
+    name: "Relu_129"
+    op_type: "Relu"
+  }
+  node {
+    input: "518"
+    input: "embed_extractor.embed_linear.weight"
+    input: "embed_extractor.embed_linear.bias"
+    output: "519"
+    name: "Gemm_130"
+    op_type: "Gemm"
+    attribute {
+      name: "alpha"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "beta"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "transB"
+      i: 1
+      type: INT
+    }
+  }
+  node {
+    output: "520"
+    name: "Constant_131"
+    op_type: "Constant"
+    attribute {
+      name: "value"
+      t {
+        data_type: 7
+      }
+      type: TENSOR
+    }
+  }
+  node {
+    input: "519"
+    input: "520"
+    output: "output"
+    name: "Gather_132"
+    op_type: "Gather"
+    attribute {
+      name: "axis"
+      i: 0
+      type: INT
+    }
+  }
+  initializer {
+      dims: 4096
+      dims: 100352
+      data_type: 1
+      name: "global_pool.global_layers.0.weight"
+  }
+  initializer {
+      dims: 4096
+      data_type: 1
+      name: "global_pool.global_layers.0.bias"
+  }
+  initializer {
+      dims: 4096
+      dims: 4096
+      data_type: 1
+      name: "global_pool.global_layers.3.weight"
+  }
+  initializer {
+      dims: 4096
+      data_type: 1
+      name: "global_pool.global_layers.3.bias"
+  }
+  initializer {
+      dims: 256
+      dims: 4096
+      data_type: 1
+      name: "embed_extractor.embed_linear.weight"
+  }
+  initializer {
+      dims: 256
+      data_type: 1
+      name: "embed_extractor.embed_linear.bias"
+  }
+  initializer {
+      dims: 64
+      dims: 3
+      dims: 7
+      dims: 7
+      data_type: 1
+      name: "523"
+  }
+  initializer {
+      dims: 64
+      data_type: 1
+      name: "524"
+  }
+  initializer {
+      dims: 64
+      dims: 64
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "526"
+  }
+  initializer {
+      dims: 64
+      data_type: 1
+      name: "527"
+  }
+  initializer {
+      dims: 64
+      dims: 64
+      dims: 3
+      dims: 3
+      data_type: 1
+      name: "529"
+  }
+  initializer {
+      dims: 64
+      data_type: 1
+      name: "530"
+  }
+  initializer {
+      dims: 256
+      dims: 64
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "532"
+  }
+  initializer {
+      dims: 256
+      data_type: 1
+      name: "533"
+  }
+  initializer {
+      dims: 256
+      dims: 64
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "535"
+  }
+  initializer {
+      dims: 256
+      data_type: 1
+      name: "536"
+  }
+  initializer {
+      dims: 64
+      dims: 256
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "538"
+  }
+  initializer {
+      dims: 64
+      data_type: 1
+      name: "539"
+  }
+  initializer {
+      dims: 64
+      dims: 64
+      dims: 3
+      dims: 3
+      data_type: 1
+      name: "541"
+  }
+  initializer {
+      dims: 64
+      data_type: 1
+      name: "542"
+  }
+  initializer {
+      dims: 256
+      dims: 64
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "544"
+  }
+  initializer {
+      dims: 256
+      data_type: 1
+      name: "545"
+  }
+  initializer {
+      dims: 64
+      dims: 256
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "547"
+  }
+  initializer {
+      dims: 64
+      data_type: 1
+      name: "548"
+  }
+  initializer {
+      dims: 64
+      dims: 64
+      dims: 3
+      dims: 3
+      data_type: 1
+      name: "550"
+  }
+  initializer {
+      dims: 64
+      data_type: 1
+      name: "551"
+  }
+  initializer {
+      dims: 256
+      dims: 64
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "553"
+  }
+  initializer {
+      dims: 256
+      data_type: 1
+      name: "554"
+  }
+  initializer {
+      dims: 128
+      dims: 256
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "556"
+  }
+  initializer {
+      dims: 128
+      data_type: 1
+      name: "557"
+  }
+  initializer {
+      dims: 128
+      dims: 128
+      dims: 3
+      dims: 3
+      data_type: 1
+      name: "559"
+  }
+  initializer {
+      dims: 128
+      data_type: 1
+      name: "560"
+  }
+  initializer {
+      dims: 512
+      dims: 128
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "562"
+  }
+  initializer {
+      dims: 512
+      data_type: 1
+      name: "563"
+  }
+  initializer {
+      dims: 512
+      dims: 256
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "565"
+  }
+  initializer {
+      dims: 512
+      data_type: 1
+      name: "566"
+  }
+  initializer {
+      dims: 128
+      dims: 512
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "568"
+  }
+  initializer {
+      dims: 128
+      data_type: 1
+      name: "569"
+  }
+  initializer {
+      dims: 128
+      dims: 128
+      dims: 3
+      dims: 3
+      data_type: 1
+      name: "571"
+  }
+  initializer {
+      dims: 128
+      data_type: 1
+      name: "572"
+  }
+  initializer {
+      dims: 512
+      dims: 128
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "574"
+  }
+  initializer {
+      dims: 512
+      data_type: 1
+      name: "575"
+  }
+  initializer {
+      dims: 128
+      dims: 512
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "577"
+  }
+  initializer {
+      dims: 128
+      data_type: 1
+      name: "578"
+  }
+  initializer {
+      dims: 128
+      dims: 128
+      dims: 3
+      dims: 3
+      data_type: 1
+      name: "580"
+  }
+  initializer {
+      dims: 128
+      data_type: 1
+      name: "581"
+  }
+  initializer {
+      dims: 512
+      dims: 128
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "583"
+  }
+  initializer {
+      dims: 512
+      data_type: 1
+      name: "584"
+  }
+  initializer {
+      dims: 128
+      dims: 512
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "586"
+  }
+  initializer {
+      dims: 128
+      data_type: 1
+      name: "587"
+  }
+  initializer {
+      dims: 128
+      dims: 128
+      dims: 3
+      dims: 3
+      data_type: 1
+      name: "589"
+  }
+  initializer {
+      dims: 128
+      data_type: 1
+      name: "590"
+  }
+  initializer {
+      dims: 512
+      dims: 128
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "592"
+  }
+  initializer {
+      dims: 512
+      data_type: 1
+      name: "593"
+  }
+  initializer {
+      dims: 256
+      dims: 512
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "595"
+  }
+  initializer {
+      dims: 256
+      data_type: 1
+      name: "596"
+  }
+  initializer {
+      dims: 256
+      dims: 256
+      dims: 3
+      dims: 3
+      data_type: 1
+      name: "598"
+  }
+  initializer {
+      dims: 256
+      data_type: 1
+      name: "599"
+  }
+  initializer {
+      dims: 1024
+      dims: 256
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "601"
+  }
+  initializer {
+      dims: 1024
+      data_type: 1
+      name: "602"
+  }
+  initializer {
+      dims: 1024
+      dims: 512
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "604"
+  }
+  initializer {
+      dims: 1024
+      data_type: 1
+      name: "605"
+  }
+  initializer {
+      dims: 256
+      dims: 1024
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "607"
+  }
+  initializer {
+      dims: 256
+      data_type: 1
+      name: "608"
+  }
+  initializer {
+      dims: 256
+      dims: 256
+      dims: 3
+      dims: 3
+      data_type: 1
+      name: "610"
+  }
+  initializer {
+      dims: 256
+      data_type: 1
+      name: "611"
+  }
+  initializer {
+      dims: 1024
+      dims: 256
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "613"
+  }
+  initializer {
+      dims: 1024
+      data_type: 1
+      name: "614"
+  }
+  initializer {
+      dims: 256
+      dims: 1024
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "616"
+  }
+  initializer {
+      dims: 256
+      data_type: 1
+      name: "617"
+  }
+  initializer {
+      dims: 256
+      dims: 256
+      dims: 3
+      dims: 3
+      data_type: 1
+      name: "619"
+  }
+  initializer {
+      dims: 256
+      data_type: 1
+      name: "620"
+  }
+  initializer {
+      dims: 1024
+      dims: 256
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "622"
+  }
+  initializer {
+      dims: 1024
+      data_type: 1
+      name: "623"
+  }
+  initializer {
+      dims: 256
+      dims: 1024
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "625"
+  }
+  initializer {
+      dims: 256
+      data_type: 1
+      name: "626"
+  }
+  initializer {
+      dims: 256
+      dims: 256
+      dims: 3
+      dims: 3
+      data_type: 1
+      name: "628"
+  }
+  initializer {
+      dims: 256
+      data_type: 1
+      name: "629"
+  }
+  initializer {
+      dims: 1024
+      dims: 256
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "631"
+  }
+  initializer {
+      dims: 1024
+      data_type: 1
+      name: "632"
+  }
+  initializer {
+      dims: 256
+      dims: 1024
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "634"
+  }
+  initializer {
+      dims: 256
+      data_type: 1
+      name: "635"
+  }
+  initializer {
+      dims: 256
+      dims: 256
+      dims: 3
+      dims: 3
+      data_type: 1
+      name: "637"
+  }
+  initializer {
+      dims: 256
+      data_type: 1
+      name: "638"
+  }
+  initializer {
+      dims: 1024
+      dims: 256
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "640"
+  }
+  initializer {
+      dims: 1024
+      data_type: 1
+      name: "641"
+  }
+  initializer {
+      dims: 256
+      dims: 1024
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "643"
+  }
+  initializer {
+      dims: 256
+      data_type: 1
+      name: "644"
+  }
+  initializer {
+      dims: 256
+      dims: 256
+      dims: 3
+      dims: 3
+      data_type: 1
+      name: "646"
+  }
+  initializer {
+      dims: 256
+      data_type: 1
+      name: "647"
+  }
+  initializer {
+      dims: 1024
+      dims: 256
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "649"
+  }
+  initializer {
+      dims: 1024
+      data_type: 1
+      name: "650"
+  }
+  initializer {
+      dims: 512
+      dims: 1024
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "652"
+  }
+  initializer {
+      dims: 512
+      data_type: 1
+      name: "653"
+  }
+  initializer {
+      dims: 512
+      dims: 512
+      dims: 3
+      dims: 3
+      data_type: 1
+      name: "655"
+  }
+  initializer {
+      dims: 512
+      data_type: 1
+      name: "656"
+  }
+  initializer {
+      dims: 2048
+      dims: 512
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "658"
+  }
+  initializer {
+      dims: 2048
+      data_type: 1
+      name: "659"
+  }
+  initializer {
+      dims: 2048
+      dims: 1024
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "661"
+  }
+  initializer {
+      dims: 2048
+      data_type: 1
+      name: "662"
+  }
+  initializer {
+      dims: 512
+      dims: 2048
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "664"
+  }
+  initializer {
+      dims: 512
+      data_type: 1
+      name: "665"
+  }
+  initializer {
+      dims: 512
+      dims: 512
+      dims: 3
+      dims: 3
+      data_type: 1
+      name: "667"
+  }
+  initializer {
+      dims: 512
+      data_type: 1
+      name: "668"
+  }
+  initializer {
+      dims: 2048
+      dims: 512
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "670"
+  }
+  initializer {
+      dims: 2048
+      data_type: 1
+      name: "671"
+  }
+  initializer {
+      dims: 512
+      dims: 2048
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "673"
+  }
+  initializer {
+      dims: 512
+      data_type: 1
+      name: "674"
+  }
+  initializer {
+      dims: 512
+      dims: 512
+      dims: 3
+      dims: 3
+      data_type: 1
+      name: "676"
+  }
+  initializer {
+      dims: 512
+      data_type: 1
+      name: "677"
+  }
+  initializer {
+      dims: 2048
+      dims: 512
+      dims: 1
+      dims: 1
+      data_type: 1
+      name: "679"
+  }
+  initializer {
+      dims: 2048
+      data_type: 1
+      name: "680"
+  }
+  initializer {
+      dims: 1
+      data_type: 7
+      name: "681"
+  }
+  input {
+    name: "img"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 1
+          }
+          dim {
+            dim_value: 3
+          }
+          dim {
+            dim_value: 224
+          }
+          dim {
+            dim_value: 224
+          }
+        }
+      }
+    }
+  }
+  output {
+    name: "output"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+}
+opset_import {
+  version: 11
+}
