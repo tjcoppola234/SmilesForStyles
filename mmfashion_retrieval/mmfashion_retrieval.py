@@ -8,6 +8,7 @@ from scipy.spatial.distance import cosine
 import json
 
 import ailia
+from deepface import DeepFace
 
 # import original modules
 # sys.path.append('../../util')
@@ -156,7 +157,7 @@ def recognize_from_image(filename, net):
 
 def recognize_from_video(filename, net):
     capture = util.webcamera_utils.get_capture(args.video)
-
+    face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
     # create video writer if savepath is specified as video format
     if args.savepath != SAVE_IMAGE_PATH:
         f_h = int(capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -167,14 +168,26 @@ def recognize_from_video(filename, net):
 
     while True:
         ret, frame = capture.read()
+        cv2.imshow('image', frame)
         if cv2.waitKey(1) & 0xFF == ord('q') or not ret:
             break
-            
+        try:
+            emotion = DeepFace.analyze(frame, actions = ['emotion'])[0]['dominant_emotion']
+        except ValueError:
+            emotion = 'Unknown'   
         x = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         x = preprocess(x)
         preds_ailia = net.predict(x)
         search_gallery(net, preds_ailia, x[0].transpose(1, 2, 0))
 
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
+        
+        for (x, y, w, h) in faces:
+            cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
+
+        # cv2.putText(frame, emotion, (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 3, (0, 0, 255), 2, cv2.LINE_4)
+        print("Dominant Emotion:", emotion)
         # save results
         if writer is not None:
             savepath = get_savepath(args.savepath, filename)
