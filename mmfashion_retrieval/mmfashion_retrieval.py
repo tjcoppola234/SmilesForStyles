@@ -168,16 +168,18 @@ def recognize_from_video(filename, net):
 
     while True:
         ret, frame = capture.read()
-        cv2.imshow('image', frame)
+        cv2.imwrite('recent.png', frame)
         if cv2.waitKey(1) & 0xFF == ord('q') or not ret:
             break
         try:
             emotion = DeepFace.analyze(frame, actions = ['emotion'])[0]['dominant_emotion']
         except ValueError:
-            emotion = 'Unknown'   
+            emotion = 'Unknown'
         x = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         x = preprocess(x)
+
         preds_ailia = net.predict(x)
+
         search_gallery(net, preds_ailia, x[0].transpose(1, 2, 0))
 
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
