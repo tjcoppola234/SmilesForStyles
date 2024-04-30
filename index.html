@@ -43,7 +43,7 @@
 	            <ul class="nav navbar-nav" id="mainNav">
 		            <li class="active"><a href="#home" class="scroll-link">Project Goal</a></li>
 					<li><a href="#aboutUs" class="scroll-link">Face/Emotion</a></li>
-					<li><a href="#services" class="scroll-link">Services</a></li>
+					<li><a href="#services" class="scroll-link">Attribute Prediction</a></li>
 					<li><a href="#portfolio" class="scroll-link">Portfolio</a></li>
 					<li><a href="#team" class="scroll-link">Team</a></li>
 					<li><a href="#contactUs" class="scroll-link">Contact Us</a></li> 
@@ -95,11 +95,17 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-			  <h2>Face/Emotion Detection</h2>
-			  <p>OpenCV is trained on the frontalface cascade and the camera is opened</p>
+			  <h2>Face/Emotion Detection (<a href="https://github.com/tjcoppola234/SmilesForStyles/blob/main/main.py" target="_blank">main.py</a>)</h2>
+			  <p>OpenCV utilizes the frontalface cascade and the camera is opened</p>
 			  <code>face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')</br>cap = cv2.VideoCapture(0)</code>
 			  <p>DeepFace analyzes the frames from the camera and detects emotional probabilities</p>
 			  <code>emotion = DeepFace.analyze(frame, actions = ['emotion'])</code>
+			  <div style="display: flex; gap: 10px; margin-top: 10px;">
+				<img class="img-responsive" src="images\emotion_object_small.png">
+			    <img src="images\kid-expressions-cover-797893772.png" alt="Child's face with different emotions - CC from https://i0.wp.com/sefiks.com/wp-content/uploads/2018/01/kid-expressions-cover.png?resize=459%2C409&ssl=1">
+			  </div>
+			  <p>Finally OpenCV recognizes the face in the image, after which the face can be captured</p> 
+			  <code>faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))</code>
 			</div> 
 		  </div>
 	<!--/.container-->
@@ -109,7 +115,7 @@
 	<div class="container">
 		    <div class="heading text-center">
 								<!-- Heading -->
-								<h2>Services</h2>								
+								<h2>Clothing Attribute Prediction (<a href="https://github.com/tjcoppola234/SmilesForStyles/blob/main/clothing_attribute_prediction.ipynb" target="_blank">clothing_attribute_prediction.ipynb</a>)</h2>								
 								<p>At lorem Ipsum available, but the majority have suffered alteration in some form by injected humour.</p>
 							</div>
 		<section class="grid row clearfix clearfix-for-2cols">
