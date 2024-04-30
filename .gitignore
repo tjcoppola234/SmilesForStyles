@@ -1,0 +1,6 @@
+virtualenv/
+deepfashion/img.zip
+deepfashion/img/
+fashion_ai/multilabel-test.csv
+fashion_ai/multilabel-train.csv
+models/

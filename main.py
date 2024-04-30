@@ -1,4 +1,15 @@
+'''
+Emotion...
+Helpful video: https://www.youtube.com/watch?v=fkgpvkqcoJc. It uses Deepface for emotion, race, and age image recognition. Also works in real-time
+
+Clothing...
+Clothing dataset: https://github.com/switchablenorms/DeepFashion2
+Finding similar clothes: https://github.com/axinc-ai/ailia-models/tree/master/deep_fashion/mmfashion_retrieval
+Clothing detection: https://github.com/axinc-ai/ailia-models/tree/master/deep_fashion/clothing-detection
+Clothing attribute detection: https://github.com/open-mmlab/mmfashion
+'''
 import cv2
+from deepface import DeepFace
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
@@ -13,6 +24,10 @@ while True:
     if not ret:
         print("Error: Could not capture frame.")
         break
+    try:
+        emotion = DeepFace.analyze(frame, actions = ['emotion'])[0]['dominant_emotion']
+    except ValueError:
+        emotion = 'Unknown'
 
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
@@ -20,6 +35,8 @@ while True:
 
     for (x, y, w, h) in faces:
         cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
+
+    cv2.putText(frame, emotion, (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 3, (0, 0, 255), 2, cv2.LINE_4)
 
     cv2.imshow('Camera', frame)
 
