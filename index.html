@@ -91,7 +91,7 @@
     <!--/.container-->
 </section> 
 
-<section id="aboutUs" class="page-section darkBg pDark pdingBtm30">
+<section id="aboutUs" class="page-section">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
@@ -104,7 +104,7 @@
 				<img class="img-responsive" src="images\emotion_object_small.png">
 			    <img src="images\kid-expressions-cover-797893772.png" alt="Child's face with different emotions - CC from https://i0.wp.com/sefiks.com/wp-content/uploads/2018/01/kid-expressions-cover.png?resize=459%2C409&ssl=1">
 			  </div>
-			  <p>Finally OpenCV recognizes the face in the image, after which the face can be captured</p> 
+			  <p>OpenCV recognizes the face in the image, after which the face can be captured and highlighted</p> 
 			  <code>faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))</code>
 			</div> 
 		  </div>
@@ -113,58 +113,20 @@
 
 <section id="services" class="page-section">
 	<div class="container">
-		    <div class="heading text-center">
-								<!-- Heading -->
-								<h2>Clothing Attribute Prediction (<a href="https://github.com/tjcoppola234/SmilesForStyles/blob/main/clothing_attribute_prediction.ipynb" target="_blank">clothing_attribute_prediction.ipynb</a>)</h2>								
-								<p>At lorem Ipsum available, but the majority have suffered alteration in some form by injected humour.</p>
-							</div>
-		<section class="grid row clearfix clearfix-for-2cols">
-
-                  <!-- grid item -->
-                  <div class="grid-item col-md-6">
-                    <div class="item-content clearfix">
-                     <i class="fa fa-cogs fa-5x"></i>
-                      <div class="text-content">
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <p>Nullam ac rhoncus sapien, non gravida purus. Aliquam adipiscing eros non elit imperdiet congue. Integer ultricies.</p>
-                      </div>
-                    </div><!-- end: .item-content -->
-                  </div><!-- end: .grid-item -->
-
-                  <!-- grid item -->
-                  <div class="grid-item col-md-6">
-                    <div class="item-content clearfix">
-                      <i class="fa fa-bullseye fa-5x"></i>
-                      <div class="text-content">
-                        <h4>Aliquam adipiscing eros non elit</h4>
-                        <p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer ultricies sed ligula eget tempus.</p>
-                      </div>
-                    </div><!-- end: .item-content -->
-                  </div><article class="clearfix"></article><!-- end: .grid-item -->
-
-                  <!-- grid item -->
-                  <div class="grid-item col-md-6">
-                    <div class="item-content clearfix">  
-                        <i class="fa fa-desktop fa-5x"></i>
-                      <div class="text-content">
-                        <h4>Integer ultricies sed ligula</h4>
-                        <p>Aliquam adipiscing eros non elit imperdiet congue. Integer ultricies sed ligula ligula eget.</p>
-                      </div>
-                    </div><!-- end: .item-content -->
-                  </div><!-- end: .grid-item -->
-
-                  <!-- grid item -->
-                  <div class="grid-item col-md-6">
-                    <div class="item-content clearfix">
-                      <i class="fa fa-flask fa-5x"></i>
-                      <div class="text-content">
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <p>Nullam ac rhoncus. Aliquam adipiscing eros non elit imperdiet congue. Integer ultricies sed ligula eget tempus.</p>
-                      </div>
-                    </div><!-- end: .item-content -->
-                  </div><article class="clearfix"></article><!-- end: .grid-item -->
-
-                </section>
+		<div class="row">
+			<div class="col-lg-12">
+				<h2>Clothing Attribute Prediction (<a href="https://github.com/tjcoppola234/SmilesForStyles/blob/main/clothing_attribute_prediction.ipynb" target="_blank">clothing_attribute_prediction.ipynb</a>)</h2>								
+				<p>The DeepFashion Category and Attribute Prediction Benchmark training and validation data is imported using Pandas and DataBlock, including 289,222 images of clothes with 98 attribute classes</p>
+				<img src="images/import2.png">
+				<p>A Fast.ai Resnet34 Convolutional Neural Network is trained on the dataset using label smoothing and FBeta accuracy measurements</p>
+				<img src="images/learn1.png">
+				<img src="images/learn2.png">
+				<p>The test data is loaded and the model validated</p>
+				<img style="margin-bottom: 10px;" src="images/test1.png">
+				<p>The model is applied to non-dataset images and their attributes are accurately predicted</p>
+				<img src="images/test2.png">
+			</div> 
+		</div>
 	</div>
 	<!--/.container-->
 </section> 
