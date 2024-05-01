@@ -1,5 +1,4 @@
 # SmilesForStyles
-WPI CS 539 - A facial expression recognition model for analyzing product favorability
 
 ## Facial Emotion Recognition Setup
 1. (Optional) Set up a virtual python environment for package management following these steps:
